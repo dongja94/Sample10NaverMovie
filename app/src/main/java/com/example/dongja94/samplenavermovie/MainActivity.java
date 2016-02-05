@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String keyword = keywordView.getText().toString();
                 if (!TextUtils.isEmpty(keyword)) {
-                    NaverMovieRequest request = new NaverMovieRequest(keyword);
+                    NaverMovieRequest request = new NaverMovieRequest(keyword, 1, 50);
                     NetworkManager.getInstance().getNetworkData(request, new NetworkManager.OnResultListener<NaverMovies>() {
                         @Override
                         public void onSuccess(NetworkRequest<NaverMovies> request, NaverMovies result) {

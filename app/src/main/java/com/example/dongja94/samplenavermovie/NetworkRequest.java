@@ -79,9 +79,9 @@ public abstract class NetworkRequest<T> implements Runnable {
     private boolean isCancel = false;
     public void cancel() {
         isCancel = true;
-        if (mConn != null) {
-            mConn.disconnect();
-        }
+//        if (mConn != null) {
+//            mConn.disconnect();
+//        }
         manager.postCancelProcess(this);
     }
 
